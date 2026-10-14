@@ -1,17 +1,50 @@
 # DocuLens — Multimodal RAG for PDF Research
 
-DocuLens helps you explore PDF documents by asking questions and tracing answers back to their source passages. It combines text retrieval, image retrieval, and citation-aware answer generation in a local research workspace.
+DocuLens is a multimodal retrieval-augmented generation (RAG) workspace for exploring PDF documents. Ask questions in natural language, get a synthesized answer, and follow its citations back to the source document and page.
 
-## What it does
+## Features
 
-- Upload and index PDFs from the browser (up to 25 MB per file).
-- Read source pages alongside retrieved evidence, with page references.
-- Retrieve text with OpenRouter embeddings and Chroma, and images with CLIP.
-- Generate answers with citations and display the supporting evidence cards.
-- Browse extracted figures and organize research with collections and notes.
-- Search across indexed PDFs; selecting evidence can guide retrieval toward it.
+- **Multimodal PDF ingestion:** upload PDFs from the browser (up to 25 MB), extract page text and embedded images, and index them for search.
+- **Semantic text retrieval:** split extracted text into overlapping chunks, retain document/page metadata, and retrieve relevant passages by meaning.
+- **Visual retrieval:** encode extracted figures with CLIP and search for related images alongside text evidence.
+- **Grounded answers:** generate answers from retrieved context, label text and image sources, and show citations with document names and page numbers.
+- **Evidence workspace:** view the original PDF beside passage and figure cards, navigate to source pages, and inspect extracted figures.
+- **Research tools:** compare or summarize documents, find related figures, build reports, and save notes or collections in the browser.
+- **Local-first workflow:** run the interface and keep uploaded PDFs, extracted images, and vector indexes on your machine.
+
+Selecting evidence can guide retrieval toward it, while questions still search all indexed PDFs. Citation checks help connect answer claims to retrieved sources, but users should review cited passages in context.
 
 The web app is a lightweight Python HTTP server with browser-side HTML, CSS, and JavaScript. It runs locally at `http://127.0.0.1:8000` by default. Collections and notes are saved in that browser's local storage. The current table view is a placeholder; table extraction is not implemented.
+
+## Technology stack
+
+| Layer | Technologies |
+| --- | --- |
+| Language and environment | Python 3.12+, `uv` |
+| Browser interface | HTML, CSS, vanilla JavaScript |
+| Local web server | Python standard-library HTTP server |
+| PDF processing | PyMuPDF, pypdf |
+| RAG orchestration and splitting | LangChain, LangChain Text Splitters |
+| Text embeddings and answer model | OpenRouter through LangChain OpenAI integration (`openai/text-embedding-3-small`; `google/gemini-2.5-flash` by default) |
+| Vector storage | Chroma via LangChain Chroma |
+| Image embeddings | CLIP via Transformers and PyTorch; Pillow for image handling |
+| Tests | pytest |
+
+## Screenshots
+
+### Document workspace
+
+| Light theme | Dark theme |
+| --- | --- |
+| <img src="docs/screenshots/document-reader-light.png" alt="DocuLens document reader and evidence canvas in light theme" width="100%"> | <img src="docs/screenshots/document-reader-dark.png" alt="DocuLens document reader and evidence canvas in dark theme" width="100%"> |
+
+### Cited answers
+
+| Light theme | Dark theme |
+| --- | --- |
+| <img src="docs/screenshots/final-answer-light.png" alt="Final answer with page-level source citations in light theme" width="100%"> | <img src="docs/screenshots/final-answer-dark.png" alt="Final answer with page-level source citations in dark theme" width="100%"> |
+
+<img src="docs/screenshots/final-answer-light-detail.png" alt="Alternate view of the cited final answer and extracted figures" width="100%">
 
 ## Requirements
 
