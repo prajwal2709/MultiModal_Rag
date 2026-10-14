@@ -1,0 +1,662 @@
+{
+  "dataset_size": 6,
+  "evaluated_cases": 6,
+  "failed_cases": [],
+  "top_k": 3,
+  "metric_definition": "Unique document/chunk IDs and binary relevance. Precision uses unique context size; known empty relevance sets with returned items count as zero precision. Recall divides unique relevant retrieved IDs by unique relevant IDs. Recall, MRR, and nDCG macro-average over cases with relevant labels. MRR and nDCG use the returned ranking.",
+  "aggregate_metrics": {
+    "baseline": {
+      "precision": 0.2777,
+      "recall": 0.5278,
+      "mrr": 0.6667,
+      "ndcg": 0.4689,
+      "hit_rate": 0.8333
+    },
+    "improved_with_neighbors": {
+      "precision": 0.2598,
+      "recall": 0.9444,
+      "mrr": 0.7083,
+      "ndcg": 0.6778,
+      "hit_rate": 1.0
+    },
+    "targeted_query_expansion": {
+      "precision": 0.3222,
+      "recall": 0.75,
+      "mrr": 0.7083,
+      "ndcg": 0.5709,
+      "hit_rate": 1.0
+    },
+    "image_retrieval": {
+      "precision": 0.0833,
+      "recall": 0.5,
+      "mrr": 1.0,
+      "ndcg": 0.6131,
+      "hit_rate": 0.1667
+    }
+  },
+  "results": [
+    {
+      "id": "R001",
+      "query": "How many layers does the Transformer encoder have?",
+      "baseline": {
+        "retrieved_chunk_indices": [
+          20,
+          19,
+          18
+        ],
+        "context_size": 3,
+        "metrics": {
+          "precision": 0.3333,
+          "recall": 1.0,
+          "mrr": 0.5,
+          "ndcg": 0.6309,
+          "hit_rate": 1,
+          "relevant_found": 1,
+          "relevant_total": 1,
+          "unique_retrieved": 3
+        }
+      },
+      "improved_with_neighbors": {
+        "retrieved_chunk_indices": [
+          20,
+          19,
+          18,
+          21,
+          17
+        ],
+        "context_size": 5,
+        "metrics": {
+          "precision": 0.2,
+          "recall": 1.0,
+          "mrr": 0.5,
+          "ndcg": 0.6309,
+          "hit_rate": 1,
+          "relevant_found": 1,
+          "relevant_total": 1,
+          "unique_retrieved": 5
+        }
+      },
+      "targeted_query_expansion": {
+        "queries": [
+          "How many layers does the Transformer encoder have?"
+        ],
+        "retrieved_chunk_indices": [
+          20,
+          19,
+          18
+        ],
+        "retrieval_provenance": {
+          "eab8145286bb0bfef2a2481f31f81ca2a6714a594ffd9b8d390e5008067a2154:20": [
+            "How many layers does the Transformer encoder have?"
+          ],
+          "eab8145286bb0bfef2a2481f31f81ca2a6714a594ffd9b8d390e5008067a2154:19": [
+            "How many layers does the Transformer encoder have?"
+          ],
+          "eab8145286bb0bfef2a2481f31f81ca2a6714a594ffd9b8d390e5008067a2154:18": [
+            "How many layers does the Transformer encoder have?"
+          ]
+        },
+        "context_size": 3,
+        "metrics": {
+          "precision": 0.3333,
+          "recall": 1.0,
+          "mrr": 0.5,
+          "ndcg": 0.6309,
+          "hit_rate": 1,
+          "relevant_found": 1,
+          "relevant_total": 1,
+          "unique_retrieved": 3
+        }
+      },
+      "image_retrieval": {
+        "retrieved_image_ids": [
+          "8efffe8a2b603755ff74f98582c2f6393643d611b14595cb159c7599888b2578",
+          "c0190267646d59cd9260657e5d99fcfa75252b18112f0a01a1e38d8e632ae9d1"
+        ],
+        "retrieved_image_pages": [
+          3,
+          3
+        ],
+        "same_page_as_retrieved_text": [
+          true,
+          true
+        ],
+        "context_size": 2,
+        "metrics": {
+          "precision": 0.0,
+          "recall": null,
+          "mrr": null,
+          "ndcg": null,
+          "hit_rate": 0,
+          "relevant_found": 0,
+          "relevant_total": 0,
+          "unique_retrieved": 2
+        }
+      }
+    },
+    {
+      "id": "R002",
+      "query": "What are the two sub-layers in each Transformer encoder layer?",
+      "baseline": {
+        "retrieved_chunk_indices": [
+          20,
+          19,
+          21
+        ],
+        "context_size": 3,
+        "metrics": {
+          "precision": 0.3333,
+          "recall": 1.0,
+          "mrr": 0.5,
+          "ndcg": 0.6309,
+          "hit_rate": 1,
+          "relevant_found": 1,
+          "relevant_total": 1,
+          "unique_retrieved": 3
+        }
+      },
+      "improved_with_neighbors": {
+        "retrieved_chunk_indices": [
+          20,
+          19,
+          21,
+          22,
+          18
+        ],
+        "context_size": 5,
+        "metrics": {
+          "precision": 0.2,
+          "recall": 1.0,
+          "mrr": 0.5,
+          "ndcg": 0.6309,
+          "hit_rate": 1,
+          "relevant_found": 1,
+          "relevant_total": 1,
+          "unique_retrieved": 5
+        }
+      },
+      "targeted_query_expansion": {
+        "queries": [
+          "What are the two sub-layers in each Transformer encoder layer?"
+        ],
+        "retrieved_chunk_indices": [
+          20,
+          19,
+          21
+        ],
+        "retrieval_provenance": {
+          "eab8145286bb0bfef2a2481f31f81ca2a6714a594ffd9b8d390e5008067a2154:20": [
+            "What are the two sub-layers in each Transformer encoder layer?"
+          ],
+          "eab8145286bb0bfef2a2481f31f81ca2a6714a594ffd9b8d390e5008067a2154:19": [
+            "What are the two sub-layers in each Transformer encoder layer?"
+          ],
+          "eab8145286bb0bfef2a2481f31f81ca2a6714a594ffd9b8d390e5008067a2154:21": [
+            "What are the two sub-layers in each Transformer encoder layer?"
+          ]
+        },
+        "context_size": 3,
+        "metrics": {
+          "precision": 0.3333,
+          "recall": 1.0,
+          "mrr": 0.5,
+          "ndcg": 0.6309,
+          "hit_rate": 1,
+          "relevant_found": 1,
+          "relevant_total": 1,
+          "unique_retrieved": 3
+        }
+      },
+      "image_retrieval": {
+        "retrieved_image_ids": [
+          "8efffe8a2b603755ff74f98582c2f6393643d611b14595cb159c7599888b2578",
+          "1cebf5904d573067ceca2e128788a12ba6ef6342ee2ce60a159e7c155fba37b9"
+        ],
+        "retrieved_image_pages": [
+          3,
+          4
+        ],
+        "same_page_as_retrieved_text": [
+          true,
+          false
+        ],
+        "context_size": 2,
+        "metrics": {
+          "precision": 0.5,
+          "recall": 0.5,
+          "mrr": 1.0,
+          "ndcg": 0.6131,
+          "hit_rate": 1,
+          "relevant_found": 1,
+          "relevant_total": 2,
+          "unique_retrieved": 2
+        }
+      }
+    },
+    {
+      "id": "R003",
+      "query": "How many attention heads does the Transformer use?",
+      "baseline": {
+        "retrieved_chunk_indices": [
+          32,
+          5,
+          10
+        ],
+        "context_size": 3,
+        "metrics": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "mrr": 0.0,
+          "ndcg": 0.0,
+          "hit_rate": 0,
+          "relevant_found": 0,
+          "relevant_total": 1,
+          "unique_retrieved": 3
+        }
+      },
+      "improved_with_neighbors": {
+        "retrieved_chunk_indices": [
+          32,
+          5,
+          10,
+          31,
+          9,
+          33,
+          11,
+          4,
+          6
+        ],
+        "context_size": 9,
+        "metrics": {
+          "precision": 0.1111,
+          "recall": 1.0,
+          "mrr": 0.25,
+          "ndcg": 0.4307,
+          "hit_rate": 1,
+          "relevant_found": 1,
+          "relevant_total": 1,
+          "unique_retrieved": 9
+        }
+      },
+      "targeted_query_expansion": {
+        "queries": [
+          "How many attention heads does the Transformer use?",
+          "How many parallel attention heads does the Transformer employ, and what is the value of h?"
+        ],
+        "retrieved_chunk_indices": [
+          32,
+          5,
+          10,
+          31,
+          11
+        ],
+        "retrieval_provenance": {
+          "eab8145286bb0bfef2a2481f31f81ca2a6714a594ffd9b8d390e5008067a2154:32": [
+            "How many attention heads does the Transformer use?",
+            "How many parallel attention heads does the Transformer employ, and what is the value of h?"
+          ],
+          "eab8145286bb0bfef2a2481f31f81ca2a6714a594ffd9b8d390e5008067a2154:5": [
+            "How many attention heads does the Transformer use?"
+          ],
+          "eab8145286bb0bfef2a2481f31f81ca2a6714a594ffd9b8d390e5008067a2154:10": [
+            "How many attention heads does the Transformer use?"
+          ],
+          "eab8145286bb0bfef2a2481f31f81ca2a6714a594ffd9b8d390e5008067a2154:31": [
+            "How many parallel attention heads does the Transformer employ, and what is the value of h?"
+          ],
+          "eab8145286bb0bfef2a2481f31f81ca2a6714a594ffd9b8d390e5008067a2154:11": [
+            "How many parallel attention heads does the Transformer employ, and what is the value of h?"
+          ]
+        },
+        "context_size": 5,
+        "metrics": {
+          "precision": 0.2,
+          "recall": 1.0,
+          "mrr": 0.25,
+          "ndcg": 0.4307,
+          "hit_rate": 1,
+          "relevant_found": 1,
+          "relevant_total": 1,
+          "unique_retrieved": 5
+        }
+      },
+      "image_retrieval": {
+        "retrieved_image_ids": [
+          "2e751ad39a587f55c7dc29bd345cafb4afb919c7e8f66b2993c704837e2fe94c",
+          "b1375ee3d91bfbf116479ee1500fbafbae302c14d8cd758c28b9c90be0c6716b"
+        ],
+        "retrieved_image_pages": [
+          4,
+          4
+        ],
+        "same_page_as_retrieved_text": [
+          false,
+          false
+        ],
+        "context_size": 2,
+        "metrics": {
+          "precision": 0.0,
+          "recall": null,
+          "mrr": null,
+          "ndcg": null,
+          "hit_rate": 0,
+          "relevant_found": 0,
+          "relevant_total": 0,
+          "unique_retrieved": 2
+        }
+      }
+    },
+    {
+      "id": "R004",
+      "query": "What scaling factor is used in scaled dot-product attention?",
+      "baseline": {
+        "retrieved_chunk_indices": [
+          24,
+          27,
+          23
+        ],
+        "context_size": 3,
+        "metrics": {
+          "precision": 0.3333,
+          "recall": 0.3333,
+          "mrr": 1.0,
+          "ndcg": 0.4693,
+          "hit_rate": 1,
+          "relevant_found": 1,
+          "relevant_total": 3,
+          "unique_retrieved": 3
+        }
+      },
+      "improved_with_neighbors": {
+        "retrieved_chunk_indices": [
+          24,
+          27,
+          23,
+          25,
+          26,
+          22,
+          28
+        ],
+        "context_size": 7,
+        "metrics": {
+          "precision": 0.4286,
+          "recall": 1.0,
+          "mrr": 1.0,
+          "ndcg": 0.8529,
+          "hit_rate": 1,
+          "relevant_found": 3,
+          "relevant_total": 3,
+          "unique_retrieved": 7
+        }
+      },
+      "targeted_query_expansion": {
+        "queries": [
+          "What scaling factor is used in scaled dot-product attention?"
+        ],
+        "retrieved_chunk_indices": [
+          24,
+          27,
+          23
+        ],
+        "retrieval_provenance": {
+          "eab8145286bb0bfef2a2481f31f81ca2a6714a594ffd9b8d390e5008067a2154:24": [
+            "What scaling factor is used in scaled dot-product attention?"
+          ],
+          "eab8145286bb0bfef2a2481f31f81ca2a6714a594ffd9b8d390e5008067a2154:27": [
+            "What scaling factor is used in scaled dot-product attention?"
+          ],
+          "eab8145286bb0bfef2a2481f31f81ca2a6714a594ffd9b8d390e5008067a2154:23": [
+            "What scaling factor is used in scaled dot-product attention?"
+          ]
+        },
+        "context_size": 3,
+        "metrics": {
+          "precision": 0.3333,
+          "recall": 0.3333,
+          "mrr": 1.0,
+          "ndcg": 0.4693,
+          "hit_rate": 1,
+          "relevant_found": 1,
+          "relevant_total": 3,
+          "unique_retrieved": 3
+        }
+      },
+      "image_retrieval": {
+        "retrieved_image_ids": [
+          "1cebf5904d573067ceca2e128788a12ba6ef6342ee2ce60a159e7c155fba37b9",
+          "98c6f0ac0fa0980cd8c5e50d34483e46aaf71cf82257696a61260ae0854df87d"
+        ],
+        "retrieved_image_pages": [
+          4,
+          4
+        ],
+        "same_page_as_retrieved_text": [
+          true,
+          true
+        ],
+        "context_size": 2,
+        "metrics": {
+          "precision": 0.0,
+          "recall": null,
+          "mrr": null,
+          "ndcg": null,
+          "hit_rate": 0,
+          "relevant_found": 0,
+          "relevant_total": 0,
+          "unique_retrieved": 2
+        }
+      }
+    },
+    {
+      "id": "R005",
+      "query": "What functions are used for positional encoding?",
+      "baseline": {
+        "retrieved_chunk_indices": [
+          40,
+          38,
+          37
+        ],
+        "context_size": 3,
+        "metrics": {
+          "precision": 0.3333,
+          "recall": 0.5,
+          "mrr": 1.0,
+          "ndcg": 0.6131,
+          "hit_rate": 1,
+          "relevant_found": 1,
+          "relevant_total": 2,
+          "unique_retrieved": 3
+        }
+      },
+      "improved_with_neighbors": {
+        "retrieved_chunk_indices": [
+          40,
+          38,
+          37,
+          39,
+          41,
+          36
+        ],
+        "context_size": 6,
+        "metrics": {
+          "precision": 0.3333,
+          "recall": 1.0,
+          "mrr": 1.0,
+          "ndcg": 0.8503,
+          "hit_rate": 1,
+          "relevant_found": 2,
+          "relevant_total": 2,
+          "unique_retrieved": 6
+        }
+      },
+      "targeted_query_expansion": {
+        "queries": [
+          "What functions are used for positional encoding?"
+        ],
+        "retrieved_chunk_indices": [
+          40,
+          38,
+          37
+        ],
+        "retrieval_provenance": {
+          "eab8145286bb0bfef2a2481f31f81ca2a6714a594ffd9b8d390e5008067a2154:40": [
+            "What functions are used for positional encoding?"
+          ],
+          "eab8145286bb0bfef2a2481f31f81ca2a6714a594ffd9b8d390e5008067a2154:38": [
+            "What functions are used for positional encoding?"
+          ],
+          "eab8145286bb0bfef2a2481f31f81ca2a6714a594ffd9b8d390e5008067a2154:37": [
+            "What functions are used for positional encoding?"
+          ]
+        },
+        "context_size": 3,
+        "metrics": {
+          "precision": 0.3333,
+          "recall": 0.5,
+          "mrr": 1.0,
+          "ndcg": 0.6131,
+          "hit_rate": 1,
+          "relevant_found": 1,
+          "relevant_total": 2,
+          "unique_retrieved": 3
+        }
+      },
+      "image_retrieval": {
+        "retrieved_image_ids": [
+          "2e751ad39a587f55c7dc29bd345cafb4afb919c7e8f66b2993c704837e2fe94c",
+          "1cebf5904d573067ceca2e128788a12ba6ef6342ee2ce60a159e7c155fba37b9"
+        ],
+        "retrieved_image_pages": [
+          4,
+          4
+        ],
+        "same_page_as_retrieved_text": [
+          false,
+          false
+        ],
+        "context_size": 2,
+        "metrics": {
+          "precision": 0.0,
+          "recall": null,
+          "mrr": null,
+          "ndcg": null,
+          "hit_rate": 0,
+          "relevant_found": 0,
+          "relevant_total": 0,
+          "unique_retrieved": 2
+        }
+      }
+    },
+    {
+      "id": "R006",
+      "query": "What are the three ways multi-head attention is used in the model?",
+      "baseline": {
+        "retrieved_chunk_indices": [
+          32,
+          28,
+          31
+        ],
+        "context_size": 3,
+        "metrics": {
+          "precision": 0.3333,
+          "recall": 0.3333,
+          "mrr": 1.0,
+          "ndcg": 0.4693,
+          "hit_rate": 1,
+          "relevant_found": 1,
+          "relevant_total": 3,
+          "unique_retrieved": 3
+        }
+      },
+      "improved_with_neighbors": {
+        "retrieved_chunk_indices": [
+          32,
+          28,
+          31,
+          33,
+          27,
+          29,
+          30
+        ],
+        "context_size": 7,
+        "metrics": {
+          "precision": 0.2857,
+          "recall": 0.6667,
+          "mrr": 1.0,
+          "ndcg": 0.6714,
+          "hit_rate": 1,
+          "relevant_found": 2,
+          "relevant_total": 3,
+          "unique_retrieved": 7
+        }
+      },
+      "targeted_query_expansion": {
+        "queries": [
+          "What are the three ways multi-head attention is used in the model?",
+          "How does masked self-attention work in the Transformer decoder?"
+        ],
+        "retrieved_chunk_indices": [
+          32,
+          28,
+          31,
+          16,
+          34
+        ],
+        "retrieval_provenance": {
+          "eab8145286bb0bfef2a2481f31f81ca2a6714a594ffd9b8d390e5008067a2154:32": [
+            "What are the three ways multi-head attention is used in the model?",
+            "How does masked self-attention work in the Transformer decoder?"
+          ],
+          "eab8145286bb0bfef2a2481f31f81ca2a6714a594ffd9b8d390e5008067a2154:28": [
+            "What are the three ways multi-head attention is used in the model?"
+          ],
+          "eab8145286bb0bfef2a2481f31f81ca2a6714a594ffd9b8d390e5008067a2154:31": [
+            "What are the three ways multi-head attention is used in the model?"
+          ],
+          "eab8145286bb0bfef2a2481f31f81ca2a6714a594ffd9b8d390e5008067a2154:16": [
+            "How does masked self-attention work in the Transformer decoder?"
+          ],
+          "eab8145286bb0bfef2a2481f31f81ca2a6714a594ffd9b8d390e5008067a2154:34": [
+            "How does masked self-attention work in the Transformer decoder?"
+          ]
+        },
+        "context_size": 5,
+        "metrics": {
+          "precision": 0.4,
+          "recall": 0.6667,
+          "mrr": 1.0,
+          "ndcg": 0.6508,
+          "hit_rate": 1,
+          "relevant_found": 2,
+          "relevant_total": 3,
+          "unique_retrieved": 5
+        }
+      },
+      "image_retrieval": {
+        "retrieved_image_ids": [
+          "1cebf5904d573067ceca2e128788a12ba6ef6342ee2ce60a159e7c155fba37b9",
+          "98c6f0ac0fa0980cd8c5e50d34483e46aaf71cf82257696a61260ae0854df87d"
+        ],
+        "retrieved_image_pages": [
+          4,
+          4
+        ],
+        "same_page_as_retrieved_text": [
+          true,
+          true
+        ],
+        "context_size": 2,
+        "metrics": {
+          "precision": 0.0,
+          "recall": null,
+          "mrr": null,
+          "ndcg": null,
+          "hit_rate": 0,
+          "relevant_found": 0,
+          "relevant_total": 0,
+          "unique_retrieved": 2
+        }
+      }
+    }
+  ]
+}

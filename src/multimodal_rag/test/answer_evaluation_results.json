@@ -1,0 +1,93 @@
+{
+  "total_cases": 10,
+  "evaluated_cases": 0,
+  "scored_cases": 0,
+  "answer_behavior_passed": 0,
+  "evidence_acknowledgment_passed": 0,
+  "errors": [
+    {
+      "id": "A001",
+      "error": "Error code: 402 - {'error': {'message': \"This request requires more credits, or fewer max_tokens. You requested up to 1800 tokens, but can only afford 1107. To increase, visit https://openrouter.ai/workspaces/default/keys/d388c417de4ef12a75b2717c66b9ba5a96133ba24d118b537caf4a5450c553e4 and adjust the key's total limit\", 'code': 402, 'metadata': {'limit_source': 'openrouter_credits', 'remedy_hint': 'Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.', 'provider_name': None, 'previous_errors': [{'code': 402, 'message': \"This request requires more credits, or fewer max_tokens. You requested up to 1800 tokens, but can only afford 1107. To increase, visit https://openrouter.ai/workspaces/default/keys/d388c417de4ef12a75b2717c66b9ba5a96133ba24d118b537caf4a5450c553e4 and adjust the key's total limit\"}, {'code': 402, 'message': \"This request requires more credits, or fewer max_tokens. You requested up to 1800 tokens, but can only afford 1107. To increase, visit https://openrouter.ai/workspaces/default/keys/d388c417de4ef12a75b2717c66b9ba5a96133ba24d118b537caf4a5450c553e4 and adjust the key's total limit\"}, {'code': 402, 'message': \"This request requires more credits, or fewer max_tokens. You requested up to 1800 tokens, but can only afford 1107. To increase, visit https://openrouter.ai/workspaces/default/keys/d388c417de4ef12a75b2717c66b9ba5a96133ba24d118b537caf4a5450c553e4 and adjust the key's total limit\"}]}}, 'user_id': 'user_3JsKIkYqQ5GGVZAqggbHDWbeS0D'}"
+    },
+    {
+      "id": "A002",
+      "error": "Error code: 402 - {'error': {'message': \"This request requires more credits, or fewer max_tokens. You requested up to 1800 tokens, but can only afford 1107. To increase, visit https://openrouter.ai/workspaces/default/keys/d388c417de4ef12a75b2717c66b9ba5a96133ba24d118b537caf4a5450c553e4 and adjust the key's total limit\", 'code': 402, 'metadata': {'limit_source': 'openrouter_credits', 'remedy_hint': 'Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.', 'provider_name': None, 'previous_errors': [{'code': 402, 'message': \"This request requires more credits, or fewer max_tokens. You requested up to 1800 tokens, but can only afford 1107. To increase, visit https://openrouter.ai/workspaces/default/keys/d388c417de4ef12a75b2717c66b9ba5a96133ba24d118b537caf4a5450c553e4 and adjust the key's total limit\"}, {'code': 402, 'message': \"This request requires more credits, or fewer max_tokens. You requested up to 1800 tokens, but can only afford 1107. To increase, visit https://openrouter.ai/workspaces/default/keys/d388c417de4ef12a75b2717c66b9ba5a96133ba24d118b537caf4a5450c553e4 and adjust the key's total limit\"}, {'code': 402, 'message': \"This request requires more credits, or fewer max_tokens. You requested up to 1800 tokens, but can only afford 1107. To increase, visit https://openrouter.ai/workspaces/default/keys/d388c417de4ef12a75b2717c66b9ba5a96133ba24d118b537caf4a5450c553e4 and adjust the key's total limit\"}]}}, 'user_id': 'user_3JsKIkYqQ5GGVZAqggbHDWbeS0D'}"
+    },
+    {
+      "id": "A003",
+      "error": "Error code: 402 - {'error': {'message': \"This request requires more credits, or fewer max_tokens. You requested up to 1800 tokens, but can only afford 1107. To increase, visit https://openrouter.ai/workspaces/default/keys/d388c417de4ef12a75b2717c66b9ba5a96133ba24d118b537caf4a5450c553e4 and adjust the key's total limit\", 'code': 402, 'metadata': {'limit_source': 'openrouter_credits', 'remedy_hint': 'Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.', 'provider_name': None, 'previous_errors': [{'code': 402, 'message': \"This request requires more credits, or fewer max_tokens. You requested up to 1800 tokens, but can only afford 1107. To increase, visit https://openrouter.ai/workspaces/default/keys/d388c417de4ef12a75b2717c66b9ba5a96133ba24d118b537caf4a5450c553e4 and adjust the key's total limit\"}, {'code': 402, 'message': \"This request requires more credits, or fewer max_tokens. You requested up to 1800 tokens, but can only afford 1107. To increase, visit https://openrouter.ai/workspaces/default/keys/d388c417de4ef12a75b2717c66b9ba5a96133ba24d118b537caf4a5450c553e4 and adjust the key's total limit\"}, {'code': 402, 'message': \"This request requires more credits, or fewer max_tokens. You requested up to 1800 tokens, but can only afford 1107. To increase, visit https://openrouter.ai/workspaces/default/keys/d388c417de4ef12a75b2717c66b9ba5a96133ba24d118b537caf4a5450c553e4 and adjust the key's total limit\"}]}}, 'user_id': 'user_3JsKIkYqQ5GGVZAqggbHDWbeS0D'}"
+    },
+    {
+      "id": "A004",
+      "error": "Error code: 402 - {'error': {'message': \"This request requires more credits, or fewer max_tokens. You requested up to 1800 tokens, but can only afford 1107. To increase, visit https://openrouter.ai/workspaces/default/keys/d388c417de4ef12a75b2717c66b9ba5a96133ba24d118b537caf4a5450c553e4 and adjust the key's total limit\", 'code': 402, 'metadata': {'limit_source': 'openrouter_credits', 'remedy_hint': 'Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.', 'provider_name': None, 'previous_errors': [{'code': 402, 'message': \"This request requires more credits, or fewer max_tokens. You requested up to 1800 tokens, but can only afford 1107. To increase, visit https://openrouter.ai/workspaces/default/keys/d388c417de4ef12a75b2717c66b9ba5a96133ba24d118b537caf4a5450c553e4 and adjust the key's total limit\"}, {'code': 402, 'message': \"This request requires more credits, or fewer max_tokens. You requested up to 1800 tokens, but can only afford 1107. To increase, visit https://openrouter.ai/workspaces/default/keys/d388c417de4ef12a75b2717c66b9ba5a96133ba24d118b537caf4a5450c553e4 and adjust the key's total limit\"}, {'code': 402, 'message': \"This request requires more credits, or fewer max_tokens. You requested up to 1800 tokens, but can only afford 1107. To increase, visit https://openrouter.ai/workspaces/default/keys/d388c417de4ef12a75b2717c66b9ba5a96133ba24d118b537caf4a5450c553e4 and adjust the key's total limit\"}]}}, 'user_id': 'user_3JsKIkYqQ5GGVZAqggbHDWbeS0D'}"
+    },
+    {
+      "id": "A005",
+      "error": "Error code: 402 - {'error': {'message': \"This request requires more credits, or fewer max_tokens. You requested up to 1800 tokens, but can only afford 1107. To increase, visit https://openrouter.ai/workspaces/default/keys/d388c417de4ef12a75b2717c66b9ba5a96133ba24d118b537caf4a5450c553e4 and adjust the key's total limit\", 'code': 402, 'metadata': {'limit_source': 'openrouter_credits', 'remedy_hint': 'Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.', 'provider_name': None, 'previous_errors': [{'code': 402, 'message': \"This request requires more credits, or fewer max_tokens. You requested up to 1800 tokens, but can only afford 1107. To increase, visit https://openrouter.ai/workspaces/default/keys/d388c417de4ef12a75b2717c66b9ba5a96133ba24d118b537caf4a5450c553e4 and adjust the key's total limit\"}, {'code': 402, 'message': \"This request requires more credits, or fewer max_tokens. You requested up to 1800 tokens, but can only afford 1107. To increase, visit https://openrouter.ai/workspaces/default/keys/d388c417de4ef12a75b2717c66b9ba5a96133ba24d118b537caf4a5450c553e4 and adjust the key's total limit\"}, {'code': 402, 'message': \"This request requires more credits, or fewer max_tokens. You requested up to 1800 tokens, but can only afford 1107. To increase, visit https://openrouter.ai/workspaces/default/keys/d388c417de4ef12a75b2717c66b9ba5a96133ba24d118b537caf4a5450c553e4 and adjust the key's total limit\"}]}}, 'user_id': 'user_3JsKIkYqQ5GGVZAqggbHDWbeS0D'}"
+    },
+    {
+      "id": "A006",
+      "error": "Error code: 402 - {'error': {'message': \"This request requires more credits, or fewer max_tokens. You requested up to 1800 tokens, but can only afford 1107. To increase, visit https://openrouter.ai/workspaces/default/keys/d388c417de4ef12a75b2717c66b9ba5a96133ba24d118b537caf4a5450c553e4 and adjust the key's total limit\", 'code': 402, 'metadata': {'limit_source': 'openrouter_credits', 'remedy_hint': 'Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.', 'provider_name': None, 'previous_errors': [{'code': 402, 'message': \"This request requires more credits, or fewer max_tokens. You requested up to 1800 tokens, but can only afford 1107. To increase, visit https://openrouter.ai/workspaces/default/keys/d388c417de4ef12a75b2717c66b9ba5a96133ba24d118b537caf4a5450c553e4 and adjust the key's total limit\"}, {'code': 402, 'message': \"This request requires more credits, or fewer max_tokens. You requested up to 1800 tokens, but can only afford 1107. To increase, visit https://openrouter.ai/workspaces/default/keys/d388c417de4ef12a75b2717c66b9ba5a96133ba24d118b537caf4a5450c553e4 and adjust the key's total limit\"}, {'code': 402, 'message': \"This request requires more credits, or fewer max_tokens. You requested up to 1800 tokens, but can only afford 1107. To increase, visit https://openrouter.ai/workspaces/default/keys/d388c417de4ef12a75b2717c66b9ba5a96133ba24d118b537caf4a5450c553e4 and adjust the key's total limit\"}]}}, 'user_id': 'user_3JsKIkYqQ5GGVZAqggbHDWbeS0D'}"
+    },
+    {
+      "id": "A007",
+      "error": "Error code: 402 - {'error': {'message': \"This request requires more credits, or fewer max_tokens. You requested up to 1800 tokens, but can only afford 1107. To increase, visit https://openrouter.ai/workspaces/default/keys/d388c417de4ef12a75b2717c66b9ba5a96133ba24d118b537caf4a5450c553e4 and adjust the key's total limit\", 'code': 402, 'metadata': {'limit_source': 'openrouter_credits', 'remedy_hint': 'Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.', 'provider_name': None, 'previous_errors': [{'code': 402, 'message': \"This request requires more credits, or fewer max_tokens. You requested up to 1800 tokens, but can only afford 1107. To increase, visit https://openrouter.ai/workspaces/default/keys/d388c417de4ef12a75b2717c66b9ba5a96133ba24d118b537caf4a5450c553e4 and adjust the key's total limit\"}, {'code': 402, 'message': \"This request requires more credits, or fewer max_tokens. You requested up to 1800 tokens, but can only afford 1107. To increase, visit https://openrouter.ai/workspaces/default/keys/d388c417de4ef12a75b2717c66b9ba5a96133ba24d118b537caf4a5450c553e4 and adjust the key's total limit\"}, {'code': 402, 'message': \"This request requires more credits, or fewer max_tokens. You requested up to 1800 tokens, but can only afford 1107. To increase, visit https://openrouter.ai/workspaces/default/keys/d388c417de4ef12a75b2717c66b9ba5a96133ba24d118b537caf4a5450c553e4 and adjust the key's total limit\"}]}}, 'user_id': 'user_3JsKIkYqQ5GGVZAqggbHDWbeS0D'}"
+    },
+    {
+      "id": "A008",
+      "error": "Error code: 402 - {'error': {'message': \"This request requires more credits, or fewer max_tokens. You requested up to 1800 tokens, but can only afford 1107. To increase, visit https://openrouter.ai/workspaces/default/keys/d388c417de4ef12a75b2717c66b9ba5a96133ba24d118b537caf4a5450c553e4 and adjust the key's total limit\", 'code': 402, 'metadata': {'limit_source': 'openrouter_credits', 'remedy_hint': 'Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.', 'provider_name': None, 'previous_errors': [{'code': 402, 'message': \"This request requires more credits, or fewer max_tokens. You requested up to 1800 tokens, but can only afford 1107. To increase, visit https://openrouter.ai/workspaces/default/keys/d388c417de4ef12a75b2717c66b9ba5a96133ba24d118b537caf4a5450c553e4 and adjust the key's total limit\"}, {'code': 402, 'message': \"This request requires more credits, or fewer max_tokens. You requested up to 1800 tokens, but can only afford 1107. To increase, visit https://openrouter.ai/workspaces/default/keys/d388c417de4ef12a75b2717c66b9ba5a96133ba24d118b537caf4a5450c553e4 and adjust the key's total limit\"}, {'code': 402, 'message': \"This request requires more credits, or fewer max_tokens. You requested up to 1800 tokens, but can only afford 1107. To increase, visit https://openrouter.ai/workspaces/default/keys/d388c417de4ef12a75b2717c66b9ba5a96133ba24d118b537caf4a5450c553e4 and adjust the key's total limit\"}]}}, 'user_id': 'user_3JsKIkYqQ5GGVZAqggbHDWbeS0D'}"
+    },
+    {
+      "id": "A009",
+      "error": "Error code: 402 - {'error': {'message': \"This request requires more credits, or fewer max_tokens. You requested up to 1800 tokens, but can only afford 1107. To increase, visit https://openrouter.ai/workspaces/default/keys/d388c417de4ef12a75b2717c66b9ba5a96133ba24d118b537caf4a5450c553e4 and adjust the key's total limit\", 'code': 402, 'metadata': {'limit_source': 'openrouter_credits', 'remedy_hint': 'Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.', 'provider_name': None, 'previous_errors': [{'code': 402, 'message': \"This request requires more credits, or fewer max_tokens. You requested up to 1800 tokens, but can only afford 1107. To increase, visit https://openrouter.ai/workspaces/default/keys/d388c417de4ef12a75b2717c66b9ba5a96133ba24d118b537caf4a5450c553e4 and adjust the key's total limit\"}, {'code': 402, 'message': \"This request requires more credits, or fewer max_tokens. You requested up to 1800 tokens, but can only afford 1107. To increase, visit https://openrouter.ai/workspaces/default/keys/d388c417de4ef12a75b2717c66b9ba5a96133ba24d118b537caf4a5450c553e4 and adjust the key's total limit\"}, {'code': 402, 'message': \"This request requires more credits, or fewer max_tokens. You requested up to 1800 tokens, but can only afford 1107. To increase, visit https://openrouter.ai/workspaces/default/keys/d388c417de4ef12a75b2717c66b9ba5a96133ba24d118b537caf4a5450c553e4 and adjust the key's total limit\"}]}}, 'user_id': 'user_3JsKIkYqQ5GGVZAqggbHDWbeS0D'}"
+    },
+    {
+      "id": "A010",
+      "error": "Error code: 402 - {'error': {'message': \"This request requires more credits, or fewer max_tokens. You requested up to 1800 tokens, but can only afford 1107. To increase, visit https://openrouter.ai/workspaces/default/keys/d388c417de4ef12a75b2717c66b9ba5a96133ba24d118b537caf4a5450c553e4 and adjust the key's total limit\", 'code': 402, 'metadata': {'limit_source': 'openrouter_credits', 'remedy_hint': 'Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.', 'provider_name': None, 'previous_errors': [{'code': 402, 'message': \"This request requires more credits, or fewer max_tokens. You requested up to 1800 tokens, but can only afford 1107. To increase, visit https://openrouter.ai/workspaces/default/keys/d388c417de4ef12a75b2717c66b9ba5a96133ba24d118b537caf4a5450c553e4 and adjust the key's total limit\"}, {'code': 402, 'message': \"This request requires more credits, or fewer max_tokens. You requested up to 1800 tokens, but can only afford 1107. To increase, visit https://openrouter.ai/workspaces/default/keys/d388c417de4ef12a75b2717c66b9ba5a96133ba24d118b537caf4a5450c553e4 and adjust the key's total limit\"}, {'code': 402, 'message': \"This request requires more credits, or fewer max_tokens. You requested up to 1800 tokens, but can only afford 1107. To increase, visit https://openrouter.ai/workspaces/default/keys/d388c417de4ef12a75b2717c66b9ba5a96133ba24d118b537caf4a5450c553e4 and adjust the key's total limit\"}]}}, 'user_id': 'user_3JsKIkYqQ5GGVZAqggbHDWbeS0D'}"
+    }
+  ],
+  "results": [],
+  "answer_relevance_passed": 0,
+  "cases_with_extraneous_details": 0,
+  "aggregate_metrics": {
+    "answer_correct": {
+      "passed": 0,
+      "total": 0
+    },
+    "answer_relevance": {
+      "passed": 0,
+      "total": 0
+    },
+    "evidence_acknowledgment": {
+      "passed": 0,
+      "total": 0
+    },
+    "cases_with_extraneous_details": 0,
+    "citation_id_validity": {
+      "valid_cases": 0,
+      "invalid_cases": 0,
+      "not_applicable_cases": 0
+    },
+    "citation_claim_association": {
+      "complete_cases": 0,
+      "partial_cases": 0,
+      "unassociated_cases": 0,
+      "not_applicable_cases": 0
+    },
+    "claim_verdict_counts": null,
+    "unsupported_claims": null,
+    "contradicted_claims": null,
+    "retrieval_failures": 0,
+    "evaluation_errors": 10,
+    "verification_failures": 0,
+    "claim_verdict_cases_available": 0
+  },
+  "configuration": {
+    "model": "google/gemini-2.5-flash",
+    "dataset": "answer_evaluation_dataset.json",
+    "dataset_size": 10,
+    "text_k": 3,
+    "image_k": 2,
+    "scorer": "deterministic case-specific rules; not an independent truth guarantee"
+  }
+}

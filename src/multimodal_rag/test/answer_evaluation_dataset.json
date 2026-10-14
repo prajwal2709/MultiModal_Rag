@@ -1,0 +1,86 @@
+[
+  {
+    "id": "A001",
+    "category": "answerable",
+    "answerability": "answerable",
+    "question": "How many identical layers does the original Transformer encoder contain?",
+    "expected_fact": "6",
+    "expected_fact_groups": [["6", "six"], ["encoder"], ["layer"]]
+  },
+  {
+    "id": "A002",
+    "category": "partially_answerable",
+    "answerability": "partially_answerable",
+    "question": "Which GPU model was used to train the original Transformer, and what was its exact serial number?",
+    "expected_fact": "P100",
+    "expected_fact_groups": [["p100"], ["serial number"], ["cannot be determined", "not provided", "not specified", "unknown", "cannot confirm", "not established"]]
+  },
+  {
+    "id": "A003",
+    "category": "unanswerable",
+    "answerability": "unanswerable",
+    "question": "What was the exact serial number of the GPU used to train the original Transformer?",
+    "expected_fact": null,
+    "expected_fact_groups": [["serial number"], ["cannot be determined", "not provided", "not specified", "unknown", "cannot confirm", "not established"]]
+  },
+  {
+    "id": "A004",
+    "category": "partially_answerable",
+    "answerability": "partially_answerable",
+    "question": "What was the exact serial number of the GPU used to train the original Transformer, and what was its purchase price?",
+    "expected_fact": null,
+    "expected_fact_groups": [["serial number"], ["price"], ["cannot be determined", "not provided", "not specified", "unknown", "cannot confirm", "not established"]]
+  },
+  {
+    "id": "A005",
+    "category": "false_premise",
+    "answerability": "partially_answerable",
+    "question": "The original Transformer paper says it was trained on 64 NVIDIA V100 GPUs, correct? What was the exact GPU serial number?",
+    "expected_fact": null,
+    "expected_fact_groups": [["p100"], ["8", "eight"], ["serial number"], ["cannot be determined", "not provided", "not specified", "unknown", "cannot confirm", "not established"]]
+  },
+  {
+    "id": "A006",
+    "category": "text_only_direct",
+    "answerability": "answerable",
+    "question": "Which functions are used for positional encoding in the Transformer?",
+    "expected_fact": "sine and cosine",
+    "expected_fact_groups": [["sine"], ["cosine"]],
+    "required_source_types": ["text"]
+  },
+  {
+    "id": "A007",
+    "category": "multi_hop",
+    "answerability": "answerable",
+    "question": "How many attention heads are used, and by what factor are dot products scaled?",
+    "expected_fact": "8 heads and square root of d_k",
+    "expected_fact_groups": [["8", "eight"], ["head"], ["square root", "sqrt", "√"], ["d_k", "dk"]],
+    "required_source_types": ["text"]
+  },
+  {
+    "id": "A008",
+    "category": "image_only",
+    "answerability": "answerable",
+    "question": "In the Transformer architecture diagram, which side shows the encoder stack?",
+    "expected_fact": "encoder on the left",
+    "expected_fact_groups": [["encoder"], ["left"]],
+    "required_source_types": ["image"]
+  },
+  {
+    "id": "A009",
+    "category": "text_and_image",
+    "answerability": "answerable",
+    "question": "What are the two sublayers in each encoder layer, and where is the encoder stack shown in the architecture diagram?",
+    "expected_fact": "self-attention and feed-forward; encoder on left",
+    "expected_fact_groups": [["attention"], ["feed-forward", "feed forward"], ["encoder"], ["left"]],
+    "required_source_types": ["text", "image"]
+  },
+  {
+    "id": "A010",
+    "category": "visual_unanswerable",
+    "answerability": "unanswerable",
+    "question": "What exact GPU serial number is printed in the Transformer architecture diagram?",
+    "expected_fact": null,
+    "expected_fact_groups": [["serial number"], ["cannot be determined", "not provided", "not specified", "unknown", "cannot confirm", "not established"]]
+  }
+]

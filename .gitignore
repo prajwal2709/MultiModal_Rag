@@ -7,5 +7,19 @@ wheels/
 *.egg-info
 
 # Virtual environments
-.venv
+.venv/
+
+# Environment variables and credentials
 .env
+.env.*
+!.env.example
+
+# Local indexes and generated/user-provided files
+chroma_db/
+data/extracted_image/*
+data/pdfs/*
+!data/pdfs/attention-is-all-you-need.pdf
+
+# Local agent workspace and scratch files
+.agents/
+check_chunk.pyfrom*

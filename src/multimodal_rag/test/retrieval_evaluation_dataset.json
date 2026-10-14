@@ -1,0 +1,50 @@
+
+[
+  {
+    "id": "R001",
+    "query": "How many layers does the Transformer encoder have?",
+    "relevant_chunk_indices": [19],
+    "relevant_image_ids": [],
+    "notes": "Chunk 19 explicitly states that the encoder has N = 6 layers. The diagrams show the repeated architecture but do not explicitly establish the numerical value."
+  },
+  {
+    "id": "R002",
+    "query": "What are the two sub-layers in each Transformer encoder layer?",
+    "relevant_chunk_indices": [19],
+    "relevant_image_ids": [
+      "8efffe8a2b603755ff74f98582c2f6393643d611b14595cb159c7599888b2578",
+      "c0190267646d59cd9260657e5d99fcfa75252b18112f0a01a1e38d8e632ae9d1"
+    ],
+    "notes": "Chunk 19 directly identifies multi-head self-attention and the feed-forward network. Both diagrams are relevant for visual understanding of the architecture, not as independent proof of every detail."
+  },
+  {
+    "id": "R003",
+    "query": "How many attention heads does the Transformer use?",
+    "relevant_chunk_indices": [31],
+    "relevant_image_ids": [],
+    "notes": "Chunk 31 explicitly states h = 8 parallel attention layers, or heads."
+  },
+  {
+    "id": "R004",
+    "query": "What scaling factor is used in scaled dot-product attention?",
+    "relevant_chunk_indices": [24, 25, 26],
+    "relevant_image_ids": [],
+    "notes": "Chunks 24-26 describe division by the square root of d_k and explain why scaling is used."
+  },
+  {
+    "id": "R005",
+    "query": "What functions are used for positional encoding?",
+    "relevant_chunk_indices": [40, 41],
+    "relevant_image_ids": [],
+    "notes": "Chunks 40-41 specify sine and cosine functions of different frequencies."
+  },
+
+{
+  "id": "R006",
+  "query": "What are the three ways multi-head attention is used in the model?",
+  "relevant_chunk_indices": [32, 33, 34],
+  "relevant_image_ids": [],
+  "notes": "Chunk 32 describes encoder-decoder attention, chunk 33 describes encoder self-attention, and chunk 34 describes decoder self-attention with masking."
+}
+
+]

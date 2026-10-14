@@ -1,0 +1,254 @@
+[
+  {
+    "id": "R001",
+    "query": "How many layers does the Transformer encoder have?",
+    "baseline": {
+      "precision": 0.1,
+      "recall": 1.0,
+      "hit": 1,
+      "retrieved_chunks": [
+        20,
+        19,
+        18,
+        21,
+        36,
+        16,
+        65,
+        35,
+        32,
+        68
+      ],
+      "context_count": 10
+    },
+    "expanded": {
+      "precision": 0.1,
+      "recall": 1.0,
+      "hit": 1,
+      "retrieved_chunks": [
+        20,
+        19,
+        18,
+        21,
+        36,
+        16,
+        65,
+        35,
+        32,
+        68
+      ],
+      "context_count": 10
+    }
+  },
+  {
+    "id": "R002",
+    "query": "What are the two sub-layers in each Transformer encoder layer?",
+    "baseline": {
+      "precision": 0.1,
+      "recall": 1.0,
+      "hit": 1,
+      "retrieved_chunks": [
+        20,
+        19,
+        21,
+        18,
+        35,
+        16,
+        32,
+        33,
+        36,
+        22
+      ],
+      "context_count": 10
+    },
+    "expanded": {
+      "precision": 0.1,
+      "recall": 1.0,
+      "hit": 1,
+      "retrieved_chunks": [
+        20,
+        19,
+        21,
+        18,
+        35,
+        16,
+        32,
+        33,
+        36,
+        22
+      ],
+      "context_count": 10
+    }
+  },
+  {
+    "id": "R003",
+    "query": "How many attention heads does the Transformer use?",
+    "baseline": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "hit": 0,
+      "retrieved_chunks": [
+        32,
+        5,
+        10,
+        16,
+        11,
+        18,
+        68,
+        70,
+        20,
+        62
+      ],
+      "context_count": 10
+    },
+    "expanded": {
+      "precision": 0.07142857142857142,
+      "recall": 1.0,
+      "hit": 1,
+      "retrieved_chunks": [
+        32,
+        5,
+        10,
+        16,
+        11,
+        18,
+        68,
+        70,
+        20,
+        62,
+        31,
+        13,
+        28,
+        29
+      ],
+      "context_count": 14
+    }
+  },
+  {
+    "id": "R004",
+    "query": "What scaling factor is used in scaled dot-product attention?",
+    "baseline": {
+      "precision": 0.3,
+      "recall": 1.0,
+      "hit": 1,
+      "retrieved_chunks": [
+        24,
+        27,
+        23,
+        26,
+        29,
+        13,
+        25,
+        28,
+        32,
+        34
+      ],
+      "context_count": 10
+    },
+    "expanded": {
+      "precision": 0.3,
+      "recall": 1.0,
+      "hit": 1,
+      "retrieved_chunks": [
+        24,
+        27,
+        23,
+        26,
+        29,
+        13,
+        25,
+        28,
+        32,
+        34
+      ],
+      "context_count": 10
+    }
+  },
+  {
+    "id": "R005",
+    "query": "What functions are used for positional encoding?",
+    "baseline": {
+      "precision": 0.2,
+      "recall": 1.0,
+      "hit": 1,
+      "retrieved_chunks": [
+        40,
+        38,
+        37,
+        33,
+        41,
+        19,
+        35,
+        34,
+        17,
+        13
+      ],
+      "context_count": 10
+    },
+    "expanded": {
+      "precision": 0.2,
+      "recall": 1.0,
+      "hit": 1,
+      "retrieved_chunks": [
+        40,
+        38,
+        37,
+        33,
+        41,
+        19,
+        35,
+        34,
+        17,
+        13
+      ],
+      "context_count": 10
+    }
+  },
+  {
+    "id": "R006",
+    "query": "What are the three ways multi-head attention is used in the model?",
+    "baseline": {
+      "precision": 0.1,
+      "recall": 0.3333333333333333,
+      "hit": 1,
+      "retrieved_chunks": [
+        32,
+        28,
+        31,
+        24,
+        29,
+        27,
+        50,
+        80,
+        10,
+        70
+      ],
+      "context_count": 10
+    },
+    "expanded": {
+      "precision": 0.16666666666666666,
+      "recall": 1.0,
+      "hit": 1,
+      "retrieved_chunks": [
+        32,
+        28,
+        31,
+        24,
+        29,
+        27,
+        50,
+        80,
+        10,
+        70,
+        16,
+        34,
+        22,
+        68,
+        18,
+        33,
+        43,
+        14
+      ],
+      "context_count": 18
+    }
+  }
+]

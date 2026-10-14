@@ -1,0 +1,76 @@
+{
+  "model": "google/gemini-2.5-flash",
+  "dataset": "evaluation_dataset.json",
+  "total_cases": 5,
+  "evaluated_cases": 5,
+  "correct_verdicts": 5,
+  "verdict_accuracy": 1.0,
+  "errors": [],
+  "results": [
+    {
+      "id": "E001",
+      "type": "supported",
+      "claim": "The encoder consists of six identical layers.",
+      "expected_verdict": "supported",
+      "predicted_verdict": "supported",
+      "verdict_correct": true,
+      "expected_citations": [
+        "T5"
+      ],
+      "explanation": "The evidence states, 'The encoder consists of a stack of N = 6 identical layers,' which directly supports the claim that the encoder consists of six identical layers.",
+      "status": "completed"
+    },
+    {
+      "id": "E002",
+      "type": "contradicted",
+      "claim": "The encoder consists of eight identical layers.",
+      "expected_verdict": "contradicted",
+      "predicted_verdict": "contradicted",
+      "verdict_correct": true,
+      "expected_citations": [
+        "T5"
+      ],
+      "explanation": "The claim states the encoder consists of eight identical layers, but the evidence from Source T5 explicitly states, 'The encoder consists of a stack of N = 6 identical layers.'",
+      "status": "completed"
+    },
+    {
+      "id": "E003",
+      "type": "insufficient_evidence",
+      "claim": "The encoder uses eight attention heads.",
+      "expected_verdict": "insufficient_evidence",
+      "predicted_verdict": "insufficient_evidence",
+      "verdict_correct": true,
+      "expected_citations": [
+        "T5"
+      ],
+      "explanation": "The provided evidence states that the encoder consists of N=6 identical layers, but it does not mention the number of attention heads used by the encoder.",
+      "status": "completed"
+    },
+    {
+      "id": "E004",
+      "type": "irrelevant_evidence",
+      "claim": "The encoder consists of six identical layers.",
+      "expected_verdict": "insufficient_evidence",
+      "predicted_verdict": "insufficient_evidence",
+      "verdict_correct": true,
+      "expected_citations": [
+        "T2"
+      ],
+      "explanation": "The provided evidence states that 'The Transformer relies entirely on self-attention without sequence-aligned RNNs or convolution.' It does not contain any information about the number of layers in the encoder, thus it cannot support or contradict the claim.",
+      "status": "completed"
+    },
+    {
+      "id": "E005",
+      "type": "visual_evidence",
+      "claim": "The encoder is shown on the left side of the architecture diagram.",
+      "expected_verdict": "supported",
+      "predicted_verdict": "supported",
+      "verdict_correct": true,
+      "expected_citations": [
+        "I1"
+      ],
+      "explanation": "The image displays an architecture diagram with two main vertical sections. The section on the left, labeled with 'Inputs' at the bottom and containing 'Input Embedding', 'Positional Encoding', and blocks like 'Multi-Head Attention' and 'Feed Forward', is clearly identifiable as the encoder part of the transformer architecture. The right section is the decoder.",
+      "status": "completed"
+    }
+  ]
+}

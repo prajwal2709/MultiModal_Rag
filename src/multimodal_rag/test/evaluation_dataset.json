@@ -1,0 +1,74 @@
+
+[
+  {
+    "id": "E001",
+    "type": "supported",
+    "evidence": [
+      {
+        "source_id": "T5",
+        "type": "text",
+        "content": "The encoder consists of a stack of N = 6 identical layers."
+      }
+    ],
+    "claim": "The encoder consists of six identical layers.",
+    "expected_verdict": "supported",
+    "expected_citations": ["T5"]
+  },
+  {
+    "id": "E002",
+    "type": "contradicted",
+    "evidence": [
+      {
+        "source_id": "T5",
+        "type": "text",
+        "content": "The encoder consists of a stack of N = 6 identical layers."
+      }
+    ],
+    "claim": "The encoder consists of eight identical layers.",
+    "expected_verdict": "contradicted",
+    "expected_citations": ["T5"]
+  },
+  {
+    "id": "E003",
+    "type": "insufficient_evidence",
+    "evidence": [
+      {
+        "source_id": "T5",
+        "type": "text",
+        "content": "The encoder consists of a stack of N = 6 identical layers."
+      }
+    ],
+    "claim": "The encoder uses eight attention heads.",
+    "expected_verdict": "insufficient_evidence",
+    "expected_citations": ["T5"]
+  },
+  {
+    "id": "E004",
+    "type": "irrelevant_evidence",
+    "evidence": [
+      {
+        "source_id": "T2",
+        "type": "text",
+        "content": "The Transformer relies entirely on self-attention without sequence-aligned RNNs or convolution."
+      }
+    ],
+    "claim": "The encoder consists of six identical layers.",
+    "expected_verdict": "insufficient_evidence",
+    "expected_citations": ["T2"]
+  },
+
+{
+  "id": "E005",
+  "type": "visual_evidence",
+  "evidence": [
+    {
+      "source_id": "I1",
+      "type": "image",
+      "image_path": "data/extracted_image/page_3_image_1.png"
+    }
+  ],
+  "claim": "The encoder is shown on the left side of the architecture diagram.",
+  "expected_verdict": "supported",
+  "expected_citations": ["I1"]
+}
+]

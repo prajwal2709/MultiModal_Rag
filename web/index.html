@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#263b31">
+  <title>DocuLens — See Beyond Text</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="app-shell" id="appShell">
+    <aside class="rail" id="navigationRail" aria-label="Main navigation">
+      <a class="brand" href="#workspace" data-view-link="workspace" aria-label="DocuLens workspace">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 40 40" role="presentation"><path d="M8 4.5h15l7 7V29H8z"/><path d="M23 4.5v7h7M12 16h8M12 20h6"/><circle cx="23.5" cy="25" r="6.5"/><path d="m28.3 29.8 5 5"/></svg></span>
+        <span><strong>DocuLens</strong><small>SEE BEYOND TEXT</small></span>
+      </a>
+      <button class="rail-toggle" id="railToggle" type="button" aria-label="Collapse navigation" title="Collapse navigation"><span>‹</span></button>
+      <nav class="primary-nav">
+        <button class="nav-item is-active" data-view-link="workspace" type="button"><span class="nav-icon">⌂</span><span>Workspace</span></button>
+        <button class="nav-item" data-view-link="documents" type="button"><span class="nav-icon">▤</span><span>Documents</span><span class="nav-count" id="navDocCount">0</span></button>
+        <button class="nav-item" data-view-link="map" type="button"><span class="nav-icon">⌘</span><span>Knowledge Map</span></button>
+        <button class="nav-item" data-view-link="collections" type="button"><span class="nav-icon">▧</span><span>Collections</span></button>
+        <button class="nav-item" data-view-link="notes" type="button"><span class="nav-icon">☷</span><span>Notes</span></button>
+        <button class="nav-item" data-view-link="research" type="button"><span class="nav-icon">⌕</span><span>Research Hub</span></button>
+      </nav>
+      <section class="recent-documents">
+        <div class="rail-section-title"><span>Recently opened</span><span class="tiny-rule"></span></div>
+        <div id="recentDocuments" class="recent-document-list"><p class="rail-muted">Your documents will appear here.</p></div>
+      </section>
+      <div class="rail-bottom">
+        <div class="profile-chip"><span class="profile-avatar">P</span><span class="profile-copy"><strong>Prajwal</strong><small id="keyStatus">Checking connection…</small></span><button id="themeToggle" type="button" aria-label="Toggle night theme" title="Toggle night theme">☼</button></div>
+      </div>
+    </aside>
+
+    <main class="main-area">
+      <header class="document-header">
+        <div class="topline">
+          <button class="mobile-menu" id="mobileMenu" type="button" aria-label="Open navigation">☰</button>
+          <button class="back-link" data-view-link="documents" type="button"><span aria-hidden="true">‹</span> Documents</button>
+          <form class="global-search" id="globalSearchForm" role="search">
+            <span aria-hidden="true">⌕</span><input id="globalSearch" type="search" placeholder="Search across your documents…" aria-label="Search across your documents">
+            <kbd>↵</kbd>
+          </form>
+          <button class="header-icon" id="headerThemeToggle" type="button" aria-label="Toggle night theme" title="Toggle night theme">☾</button>
+          <label class="header-icon upload-quick" for="fileInput" title="Add a PDF" aria-label="Add a PDF">＋</label>
+        </div>
+        <div class="document-title-row">
+          <div class="pdf-emblem" aria-hidden="true">PDF</div>
+          <div class="document-heading"><h1 id="activeDocumentName">Choose a document</h1><p id="activeDocumentSub">Your research library</p></div>
+          <span class="status-pill" id="indexStatus"><i></i> Waiting</span>
+          <span class="stat-pill"><strong id="pageCount">0</strong><small>Pages</small></span>
+          <span class="stat-pill"><strong id="figureCount">0</strong><small>Figures</small></span>
+          <button class="collection-action" id="addToCollection" type="button">Add to collection <span>＋</span></button>
+        </div>
+        <div class="header-bottom">
+          <nav class="workspace-tabs" aria-label="Document views">
+            <button class="workspace-tab is-active" data-tab="overview" type="button">Overview</button>
+            <button class="workspace-tab" data-tab="pages" type="button">Pages</button>
+            <button class="workspace-tab" data-tab="figures" type="button">Figures</button>
+            <button class="workspace-tab" data-tab="tables" type="button">Tables</button>
+            <button class="workspace-tab" data-tab="insights" type="button">Insights</button>
+          </nav>
+          <span class="header-note">Knowledge connects<br>evidence connects ideas.</span>
+        </div>
+      </header>
+
+      <section class="screen workspace-screen" id="workspaceScreen" data-screen="workspace">
+        <div class="research-grid" id="researchGrid">
+          <section class="reader-panel paper-panel" id="readerPanel" aria-label="PDF reader">
+            <div class="panel-heading"><div><span class="eyebrow">Original source</span><h2>Document reader</h2></div><span class="page-chip" id="readerPageLabel">— / —</span></div>
+            <div class="reader-body">
+              <div class="page-rail" id="pageRail" aria-label="Page thumbnails"><p class="empty-hint">Select a PDF to browse its pages.</p></div>
+              <div class="pdf-viewer-wrap">
+                <div class="reader-toolbar">
+                  <button class="reader-control" id="previousPage" type="button" aria-label="Previous page" title="Previous page">‹</button>
+                  <label class="page-number-label"><input id="pageNumber" type="number" min="1" value="1" aria-label="Current page"><span id="totalPages">/ —</span></label>
+                  <button class="reader-control" id="nextPage" type="button" aria-label="Next page" title="Next page">›</button>
+                  <span class="toolbar-divider"></span>
+                  <button class="reader-control" id="zoomOut" type="button" aria-label="Zoom out">−</button><span class="zoom-readout" id="zoomReadout">100%</span><button class="reader-control" id="zoomIn" type="button" aria-label="Zoom in">＋</button>
+                  <button class="reader-control fullscreen-control" id="readerFullscreen" type="button" aria-label="Full screen reader" title="Full screen">⛶</button>
+                </div>
+                <div class="pdf-frame-wrap" id="pdfFrameWrap"><div class="reader-empty"><span>▤</span><strong>Your source page will appear here</strong><small>Add or select an indexed PDF to begin.</small></div></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="canvas-panel" id="evidenceCanvas" aria-label="Interactive evidence canvas">
+            <div class="canvas-toolbar"><div><span class="eyebrow">Research canvas</span><h2>Evidence connections</h2></div><div class="canvas-actions"><button id="connectMode" class="quiet-action" type="button" title="Select two cards to connect">↗ Connect</button><button id="fitCanvas" class="quiet-action" type="button" title="Reset card layout">⤢ Fit</button></div></div>
+            <div class="canvas-caption"><span class="pin-dot"></span><span id="canvasStatus">Answers and selected evidence will be pinned here.</span></div>
+            <div class="canvas-workspace" id="canvasWorkspace">
+              <svg class="connector-layer" id="connectorLayer" aria-hidden="true"></svg>
+              <div class="canvas-empty" id="canvasEmpty"><span class="empty-spark">✳</span><h3>A place for your evidence</h3><p>Ask a question or add a figure to pin source cards here. Drag cards to arrange them, then connect related evidence.</p></div>
+              <div class="evidence-card-layer" id="evidenceCardLayer"></div>
+            </div>
+          </section>
+
+          <aside class="insights-panel paper-panel" id="insightsPanel" aria-label="Document insights">
+            <div class="panel-heading insights-heading"><div><span class="eyebrow">Field notes</span><h2>Insights</h2></div><button class="mini-icon" id="closeInsights" type="button" aria-label="Hide insights panel" title="Hide insights">×</button></div>
+            <div class="insight-tabs" role="tablist"><button class="is-active" data-insight="summary" role="tab" type="button">Summary</button><button data-insight="connections" role="tab" type="button">Connections</button><button data-insight="questions" role="tab" type="button">Questions</button></div>
+            <div id="insightContent" class="insight-content"><div class="insight-placeholder"><span>✧</span><h3>Research notes</h3><p>Ask DocuLens a question to bring source-backed insights into this panel.</p></div></div>
+            <div class="botanical-mark" aria-hidden="true">❧</div>
+          </aside>
+        </div>
+
+        <section class="final-answer paper-panel" id="finalAnswer" aria-live="polite" hidden>
+          <header class="final-answer-header">
+            <div><span class="eyebrow">DocuLens response</span><h2>Final answer</h2></div>
+            <div class="final-answer-tools"><span id="answerCheck" class="answer-check">Evidence links appear below</span><button id="copyAnswer" class="quiet-action" type="button">Copy answer</button></div>
+          </header>
+          <div class="final-answer-body" id="finalAnswerBody"></div>
+          <div class="answer-source-links" id="answerSourceLinks" aria-label="Cited source links"></div>
+        </section>
+
+        <form class="command-paper" id="askForm">
+          <div class="command-title"><span class="command-spark">✦</span><div><strong>Ask DocuLens</strong><small id="askScope">Searching all indexed PDFs</small></div></div>
+          <label class="visually-hidden" for="question">Ask a question about your documents</label>
+          <textarea id="question" rows="1" maxlength="2000" placeholder="Explore, compare, or ask anything about your documents…"></textarea>
+          <button id="sendButton" class="send-button" type="submit" aria-label="Ask DocuLens"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m4 4 17 8-17 8 3-8-3-8Zm3 8h14"/></svg></button>
+          <div class="command-chips" aria-label="Suggested research actions"><button type="button" data-prompt="Explain the key idea in the current document.">↗ Explain</button><button type="button" data-prompt="Compare the main ideas across the indexed PDFs.">↗ Compare</button><button type="button" data-prompt="Find figures related to the main topic.">◉ Find related figures</button><button type="button" data-prompt="Summarize the current document.">▤ Summarize</button><button type="button" data-prompt="Create a concise research report from the indexed PDFs.">▧ Build report</button></div>
+        </form>
+
+        <section class="figure-strip paper-panel" id="figureGallery" aria-label="Extracted figures">
+          <div class="figure-strip-heading"><div><span class="eyebrow">Visual evidence</span><h2>Extracted figures</h2></div><span id="figureStripCount" class="subtle-count">Select a PDF</span></div>
+          <div id="figureItems" class="figure-items"><p class="empty-hint">Figures from the selected PDF appear here after indexing.</p></div>
+        </section>
+        <div class="notice" id="notice" role="status" aria-live="polite" hidden></div>
+      </section>
+
+      <section class="screen library-screen" id="documentsScreen" data-screen="documents" hidden>
+        <div class="screen-heading"><div><span class="eyebrow">Your archive</span><h2>Document library</h2><p>Only indexed PDFs are searchable. Add a document to extract its text and figures.</p></div><label class="primary-action" for="fileInput">＋ Add a PDF</label></div>
+        <div class="library-toolbar"><input type="search" id="librarySearch" placeholder="Find a document…" aria-label="Filter documents"><span id="librarySummary">0 documents</span></div>
+        <div id="libraryCards" class="library-cards"></div>
+        <div class="upload-progress library-progress" id="uploadProgress" hidden><span class="spinner"></span><span id="uploadProgressText">Preparing PDF…</span></div>
+      </section>
+      <section class="screen secondary-screen" id="mapScreen" data-screen="map" hidden><div class="screen-heading"><div><span class="eyebrow">Your research graph</span><h2>Knowledge map</h2><p>Connections shown here are the evidence links you create on the workspace canvas.</p></div></div><div class="secondary-paper" id="mapContent"></div></section>
+      <section class="screen secondary-screen" id="collectionsScreen" data-screen="collections" hidden><div class="screen-heading"><div><span class="eyebrow">Curated reading</span><h2>Collections</h2><p>Group your library PDFs into collections saved in this browser.</p></div><button class="primary-action" id="newCollection" type="button">＋ New collection</button></div><div id="collectionCards" class="collection-cards"></div></section>
+      <section class="screen secondary-screen" id="notesScreen" data-screen="notes" hidden><div class="screen-heading"><div><span class="eyebrow">Research journal</span><h2>Notes</h2><p>Notes are saved locally in this browser and stay attached to the selected PDF.</p></div></div><div class="note-editor secondary-paper"><label for="documentNote">Working note · <span id="noteDocumentName">No document selected</span></label><textarea id="documentNote" placeholder="Record a thought, question, or research lead…"></textarea><span id="noteSaveStatus" role="status">Saved in this browser</span></div></section>
+      <section class="screen secondary-screen" id="researchScreen" data-screen="research" hidden><div class="screen-heading"><div><span class="eyebrow">Research desk</span><h2>Research hub</h2><p>Start with a source-grounded question. Answers and citations appear on your workspace canvas.</p></div></div><div class="research-prompts" id="researchPrompts"></div></section>
+    </main>
+  </div>
+
+  <input id="fileInput" type="file" accept="application/pdf,.pdf" hidden aria-label="Choose a PDF to add">
+  <div id="mobileBackdrop" class="mobile-backdrop" hidden></div>
+  <dialog class="figure-dialog" id="figureDialog" aria-label="Figure preview"><form method="dialog"><button class="dialog-close" aria-label="Close figure preview">×</button></form><img id="figurePreview" alt="Expanded extracted figure"><p id="figureCaption"></p></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  <script src="/app.js" defer></script>
+</body>
+</html>
